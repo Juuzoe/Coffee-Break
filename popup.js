@@ -1,4 +1,4 @@
-let points = 50; // Adjusted for testing
+let points = 0;
 let interval;
 let selectedTheme = null;
 
@@ -20,7 +20,6 @@ function initialiseApp() {
   });
 }
 
-// Set up theme buttons for all themes
 function setupThemeButtons(data) {
   const themes = ["night", "sunset", "forest"];
 
@@ -29,7 +28,6 @@ function setupThemeButtons(data) {
   });
 }
 
-// Update a single theme button
 function updateThemeButton(theme, data) {
   const buttonId = `${theme}ThemeButton`;
   const button = document.getElementById(buttonId);
@@ -41,7 +39,6 @@ function updateThemeButton(theme, data) {
   const isPurchased = data[`${themeClass}Purchased`] || false;
   const isSelected = selectedTheme === themeClass;
 
-  // Set button text and action
   if (isSelected) {
     button.textContent = "Unselect";
     button.onclick = () => unselectTheme(themeClass, theme, data);
@@ -54,15 +51,12 @@ function updateThemeButton(theme, data) {
   }
 }
 
-// Function to purchase a theme
 function purchaseTheme(themeClass, cost, theme, data) {
   if (points >= cost) {
     points -= cost;
 
-    // Save points and mark the theme as purchased
     chrome.storage.sync.set({ points });
     chrome.storage.sync.set({ [`${themeClass}Purchased`]: true }, () => {
-      // Update only this theme's button
       updateThemeButton(theme, { ...data, [`${themeClass}Purchased`]: true });
     });
 
@@ -72,31 +66,27 @@ function purchaseTheme(themeClass, cost, theme, data) {
   }
 }
 
-// Function to select a theme
+// A function to select a theme
 function selectTheme(themeClass, theme, data) {
-  // Apply the theme
   applyTheme(themeClass);
   selectedTheme = themeClass;
 
-  // Save the selected theme and update buttons
   chrome.storage.sync.set({ selectedTheme }, () => {
     setupThemeButtons(data);
   });
 }
 
-// Function to unselect a theme
+// A function to unselect a theme
 function unselectTheme(themeClass, theme, data) {
-  // Revert to the default theme
   document.body.className = "";
   selectedTheme = null;
 
-  // Save the unselected state and update buttons
   chrome.storage.sync.set({ selectedTheme: null }, () => {
     setupThemeButtons(data);
   });
 }
 
-// Apply the selected theme
+// a function to apply the selected theme
 function applyTheme(themeClass) {
   document.body.className = themeClass;
 
@@ -118,7 +108,7 @@ function applyTheme(themeClass) {
   }
 }
 
-// Timer functionality
+// Timer
 function startCountdown(startTime, duration) {
   const message = document.getElementById("message");
   const coffeeFill = document.getElementById("coffeeFill");
@@ -167,7 +157,7 @@ document.getElementById("startTimer").addEventListener("click", () => {
   startCountdown(startTime, duration);
 });
 
-// Synchronise changes across tabs and windows
+// it synchronise changes across tabs and windows
 chrome.storage.onChanged.addListener((changes) => {
   chrome.storage.sync.get(null, (data) => {
     if (changes.points) {
@@ -190,15 +180,15 @@ chrome.storage.onChanged.addListener((changes) => {
   });
 });
 
-// Update the points display
+// points display
 function updatePointsDisplay() {
   document.getElementById("points").textContent = `Points: ${points}`;
 }
 
-// Initialise the app on page load
+// Initialising the app on page load
 document.addEventListener("DOMContentLoaded", initialiseApp);
 
-// FAQ Modal
+// FAQ 
 document.getElementById("faqButton").addEventListener("click", () => {
   document.getElementById("faqModal").classList.add("visible");
 });
@@ -207,14 +197,14 @@ document.getElementById("closeFaq").addEventListener("click", () => {
   document.getElementById("faqModal").classList.remove("visible");
 });
 
-// Shop Toggle
+// Shop close n open
 document.getElementById("shopToggle").addEventListener("click", () => {
   const shop = document.getElementById("shop");
   shop.classList.toggle("hidden");
   document.getElementById("shopToggle").textContent = shop.classList.contains("hidden") ? "Open Shop" : "Close Shop";
 });
 
-// Open New Window
+// Open the new window
 document.getElementById("newWindowButton").addEventListener("click", () => {
   chrome.windows.create({
     url: "popup.html",

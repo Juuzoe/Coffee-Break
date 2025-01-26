@@ -8,8 +8,8 @@ body {
 
 /* Theme: Night */
 body.night-theme {
-  background: #121212; /* Dark grey background for the entire app */
-  color: #ffffff; /* White text for better visibility */
+  background: #121212; 
+  color: #ffffff; 
 }
 
 /* Theme: Sunset */
@@ -29,7 +29,7 @@ body.forest-theme {
   width: 350px;
   margin: 0 auto;
   padding: 20px;
-  background: #ffffff; /* Default white background */
+  background: #ffffff; 
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -48,9 +48,9 @@ body.forest-theme {
 
 /* Main Container Styling for Night Theme */
 body.night-theme #app {
-  background: #1c1c1c; /* Night-grey background for the app */
-  color: #ffffff; /* White text for content */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
+  background: #1c1c1c; 
+  color: #ffffff; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
 }
 
 /* Title Styling */
@@ -74,7 +74,7 @@ body.night-theme #app {
   width: 128px;
   height: 128px;
   margin: 20px auto;
-  background: transparent; /* Ensure it is transparent unless explicitly styled */
+  background: transparent; 
 }
 
 /* Coffee Fill Animation */
@@ -96,19 +96,19 @@ body.night-theme #app {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
-  z-index: 2; /* Ensure the cup is above the fill */
+  z-index: 2; /* ensuring the cup is above the fill */
 }
 
 /* Coffee Cup Container */
 body.night-theme #coffeeCupContainer {
-  background: #1c1c1c; /* Matches the main container's background */
+  background: #1c1c1c; 
 }
 
 /* Button Styling */
 button {
   font-weight: bold;
   border: none;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   background: linear-gradient(to right, #d4c8b8, #b8a89c);
   color: #fff;
   cursor: pointer;
@@ -151,8 +151,8 @@ button:active {
   padding: 8px 30px;
   margin: 0 5px;
   border: none;
-  border-radius: 8px; /* Rounded corners */
-  background: linear-gradient(to right, #e0d4c4, #c8b8a8); /* Darker creme */
+  border-radius: 8px; 
+  background: linear-gradient(to right, #e0d4c4, #c8b8a8); 
   color: #fff;
   font-size: 14px;
   font-weight: 600;
@@ -211,7 +211,7 @@ button:active {
   width: 300px;
   background: #fff6e6;
   border: 2px solid #b5651d;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: none;
@@ -228,7 +228,7 @@ button:active {
   top: 10px;
   width: 40px;
   height: 40px;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -247,7 +247,7 @@ button:active {
 /* New Window Button */
 #newWindowButton {
   right: 10px;
-  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient */
+  background: linear-gradient(to right, #4e342e, #6d4c41); 
 }
 
 #newWindowButton:hover {
@@ -256,11 +256,11 @@ button:active {
 
 /* Shop Button */
 #shopToggle {
-  margin-top: 20px; /* Moved down */
-  padding: 15px 30px; /* Bigger size */
-  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient */
+  margin-top: 20px; 
+  padding: 15px 30px;
+  background: linear-gradient(to right, #4e342e, #6d4c41); 
   border: none;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
   font-weight: 600;
   color: #fff;
   cursor: pointer;
@@ -274,19 +274,19 @@ button:active {
 
 /* Night Theme Specific Styles */
 body.night-theme {
-  background: #1c1c1c; /* Dark grey for background */
-  color: #ffffff; /* White text for better visibility */
+  background: #1c1c1c; 
+  color: #ffffff; 
 }
 
 #coffeeCupContainer.night-theme {
-  background: #1c1c1c; /* Same dark grey as the body */
+  background: #1c1c1c; 
 }
 
 /* Header and Section Titles in Night Theme */
 body.night-theme .title,
 body.night-theme h2,
 body.night-theme h3 {
-  color: #ffffff; /* White text */
+  color: #ffffff;
 }
 
 /* Buttons in Night Theme */
@@ -296,8 +296,8 @@ body.night-theme button {
 }
 
 body.night-theme button:hover {
-  background: linear-gradient(to right, #5a5a5a, #3a3a3a); /* Inverted hover effect */
-  color: #ffffff; /* White text on hover */
+  background: linear-gradient(to right, #5a5a5a, #3a3a3a); 
+  color: #ffffff; 
 }
 
 /* Quick Time Buttons */
@@ -314,12 +314,12 @@ body.night-theme .quick-time:hover {
 /* Shop Items in Night Theme */
 body.night-theme .shop-item {
   background: #2a2a2a; /* Slightly lighter grey */
-  color: #ffffff; /* White text for theme names */
+  color: #ffffff; 
 }
 
 /* Shop Buttons in Night Theme */
 body.night-theme .shop-item button {
-  background: linear-gradient(to right, #3a3a3a, #5a5a5a); /* Grey gradient */
+  background: linear-gradient(to right, #3a3a3a, #5a5a5a);
   color: #dcdcdc;
 }
 
@@ -339,9 +339,9 @@ input#studyTime {
 }
 
 body.night-theme input#studyTime {
-  background: #2a2a2a; /* Dark grey for input in night theme */
-  border: 1px solid #5a5a5a; /* Grey border */
-  color: #dcdcdc; /* Light grey text */
+  background: #2a2a2a; 
+  border: 1px solid #5a5a5a; 
+  color: #dcdcdc; 
 }
 
 body.night-theme input#studyTime::placeholder {
@@ -357,44 +357,44 @@ body.night-theme input#studyTime::placeholder {
 }
 
 body.night-theme #message {
-  color: #ffffff; /* White text for night theme */
+  color: #ffffff; 
 }
 
 /* Forest Theme Specific Styles */
 body.forest-theme {
   background: #014421; /* Dark green for app background */
-  color: #ffffff; /* White text for better visibility */
+  color: #ffffff; 
 }
 
 body.forest-theme #app {
   background: #228B22; /* Green for the body and sprite background */
-  color: #ffffff; /* White text for content */
+  color: #ffffff; 
 }
 
 body.forest-theme #coffeeCupContainer {
-  background: #228B22; /* Matches app background in forest theme */
+  background: #228B22; 
 }
 
 /* Headers and Section Titles in Forest Theme */
 body.forest-theme .title,
 body.forest-theme h2,
 body.forest-theme h3 {
-  color: #ffffff; /* White text for headers */
+  color: #ffffff; 
 }
 
 /* Buttons in Forest Theme */
 body.forest-theme button {
-  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient for brown buttons */
-  color: #ffffff; /* White text for brown buttons */
+  background: linear-gradient(to right, #4e342e, #6d4c41); 
+  color: #ffffff; 
 }
 
 body.forest-theme button.light-brown {
-  background: linear-gradient(to right, #a0522d, #cd853f); /* Light brown gradient for light-brown buttons */
+  background: linear-gradient(to right, #a0522d, #cd853f); 
   color: #ffffff;
 }
 
 body.forest-theme button.light-brown:hover {
-  background: linear-gradient(to right, #cd853f, #a0522d); /* Light brown hover */
+  background: linear-gradient(to right, #cd853f, #a0522d); 
   color: #ffffff;
 }
 
@@ -405,20 +405,20 @@ body.forest-theme .quick-time {
 }
 
 body.forest-theme .quick-time:hover {
-  background: linear-gradient(to right, #cd853f, #a0522d); /* Hover effect */
+  background: linear-gradient(to right, #cd853f, #a0522d); 
   color: #ffffff;
 }
 
 /* Shop Items in Forest Theme */
 body.forest-theme .shop-item {
   background: #2e8b57; /* Forest green */
-  color: #ffffff; /* White text for theme names */
+  color: #ffffff; 
 }
 
 /* Shop Buttons in Forest Theme */
 body.forest-theme .shop-item button {
   background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient */
-  color: #ffffff; /* White text */
+  color: #ffffff; 
 }
 
 body.forest-theme .shop-item button.light-brown {
@@ -447,7 +447,7 @@ body.forest-theme input#studyTime::placeholder {
 /* Sunset Theme Styles */
 body.sunset-theme {
   background: linear-gradient(to top, #FF7E5F, #FFB199); /* Sunset gradient */
-  color: #3e2723; /* Brown text for contrast */
+  color: #3e2723; 
 }
 
 body.sunset-theme #app {
@@ -455,7 +455,7 @@ body.sunset-theme #app {
 }
 
 body.sunset-theme #coffeeCupContainer {
-  background: linear-gradient(to top, #FF7E5F, #FFB199); /* Matches app background */
+  background: linear-gradient(to top, #FF7E5F, #FFB199); 
 }
 
 /* Buttons in Sunset Theme */
@@ -477,7 +477,7 @@ body.sunset-theme button.orange:hover {
 body.sunset-theme input#studyTime {
   background: #FFB199; /* Light sunset gradient */
   border: 1px solid #FF7E5F;
-  color: #3e2723; /* Brown text */
+  color: #3e2723; 
 }
 
 body.sunset-theme input#studyTime::placeholder {

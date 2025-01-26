@@ -1,0 +1,485 @@
+/* General Body Styling */
+body {
+  font-family: 'Comfortaa', sans-serif;
+  text-align: center;
+  color: #3e2723;
+  overflow: hidden;
+}
+
+/* Theme: Night */
+body.night-theme {
+  background: #121212; /* Dark grey background for the entire app */
+  color: #ffffff; /* White text for better visibility */
+}
+
+/* Theme: Sunset */
+body.sunset-theme {
+  background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  color: #332211;
+}
+
+/* Theme: Forest */
+body.forest-theme {
+  background: linear-gradient(to bottom, #2e8b57, #3cb371);
+  color: #f0f8ff;
+}
+
+/* Main Container Styling */
+#app {
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff; /* Default white background */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+#app.cropped {
+  width: 250px;
+  height: 400px;
+  overflow: hidden;
+}
+
+#app.expanded {
+  width: 350px;
+  height: 600px;
+}
+
+/* Main Container Styling for Night Theme */
+body.night-theme #app {
+  background: #1c1c1c; /* Night-grey background for the app */
+  color: #ffffff; /* White text for content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
+}
+
+/* Title Styling */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Currency and Points Display */
+#currency, #points {
+  font-size: 18px;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+/* Coffee Cup Container */
+#coffeeCupContainer {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  margin: 20px auto;
+  background: transparent; /* Ensure it is transparent unless explicitly styled */
+}
+
+/* Coffee Fill Animation */
+#coffeeFill {
+  position: absolute;
+  bottom: 13px; /* Shift 13px up */
+  left: 32px; /* Shift 5px left (36px - 5px) */
+  width: 56px;
+  height: 0;
+  background: linear-gradient(to top, #6f4e37, #d2b48c, #fff5e1); /* Gradient fill */
+  transition: height 1s ease-in-out; /* Smooth animation */
+  z-index: 1;
+}
+
+/* Coffee Cup Image */
+#coffeeCup img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  z-index: 2; /* Ensure the cup is above the fill */
+}
+
+/* Coffee Cup Container */
+body.night-theme #coffeeCupContainer {
+  background: #1c1c1c; /* Matches the main container's background */
+}
+
+/* Button Styling */
+button {
+  font-weight: bold;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  background: linear-gradient(to right, #d4c8b8, #b8a89c);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, color 0.3s;
+}
+
+/* Button Hover and Active Effects */
+button:hover {
+  background: linear-gradient(to right, #b8a89c, #d4c8b8);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Specific Button Styles */
+#newWindowButton, #startTimer, #shopToggle {
+  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient */
+}
+
+#newWindowButton:hover, #startTimer:hover, #shopToggle:hover {
+  background: linear-gradient(to right, #6d4c41, #4e342e);
+}
+
+/* Start Button Updates */
+#startTimer {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 16px;
+  background: linear-gradient(to right, #4e342e, #6d4c41);
+}
+
+/* Quick Time Buttons */
+.quick-times {
+  margin-top: 10px;
+}
+
+.quick-time {
+  padding: 8px 30px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  background: linear-gradient(to right, #e0d4c4, #c8b8a8); /* Darker creme */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.quick-time:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #c8b8a8, #e0d4c4);
+}
+
+/* Shop Items */
+.shop-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  padding: 10px 15px;
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Shop Buttons */
+.shop-item button {
+  background: linear-gradient(to right, #e0d4c4, #c8b8a8); /* Darker creme */
+}
+
+.shop-item button:hover {
+  background: linear-gradient(to right, #c8b8a8, #e0d4c4);
+}
+
+/* Shop Sections */
+.shop-section {
+  margin-top: 20px;
+}
+
+.shop-section h3 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Shop Visibility */
+#shop.hidden {
+  display: none;
+}
+
+/* FAQ Modal */
+#faqModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: #fff6e6;
+  border: 2px solid #b5651d;
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+}
+
+#faqModal.visible {
+  display: block;
+}
+
+/* FAQ Button */
+#faqButton, #newWindowButton {
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#faqButton {
+  left: 10px;
+  background: linear-gradient(to right, #4e342e, #6d4c41);
+}
+
+#faqButton:hover {
+  background: linear-gradient(to right, #6d4c41, #4e342e);
+}
+
+/* New Window Button */
+#newWindowButton {
+  right: 10px;
+  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient */
+}
+
+#newWindowButton:hover {
+  background: linear-gradient(to right, #6d4c41, #4e342e);
+}
+
+/* Shop Button */
+#shopToggle {
+  margin-top: 20px; /* Moved down */
+  padding: 15px 30px; /* Bigger size */
+  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+#shopToggle:hover {
+  background: linear-gradient(to right, #6d4c41, #4e342e);
+  transform: scale(1.05);
+}
+
+/* Night Theme Specific Styles */
+body.night-theme {
+  background: #1c1c1c; /* Dark grey for background */
+  color: #ffffff; /* White text for better visibility */
+}
+
+#coffeeCupContainer.night-theme {
+  background: #1c1c1c; /* Same dark grey as the body */
+}
+
+/* Header and Section Titles in Night Theme */
+body.night-theme .title,
+body.night-theme h2,
+body.night-theme h3 {
+  color: #ffffff; /* White text */
+}
+
+/* Buttons in Night Theme */
+body.night-theme button {
+  background: linear-gradient(to right, #3a3a3a, #5a5a5a); /* Grey gradient */
+  color: #dcdcdc; /* Light grey text */
+}
+
+body.night-theme button:hover {
+  background: linear-gradient(to right, #5a5a5a, #3a3a3a); /* Inverted hover effect */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Quick Time Buttons */
+body.night-theme .quick-time {
+  background: linear-gradient(to right, #3a3a3a, #5a5a5a); /* Grey gradient */
+  color: #dcdcdc;
+}
+
+body.night-theme .quick-time:hover {
+  background: linear-gradient(to right, #5a5a5a, #3a3a3a);
+  color: #ffffff;
+}
+
+/* Shop Items in Night Theme */
+body.night-theme .shop-item {
+  background: #2a2a2a; /* Slightly lighter grey */
+  color: #ffffff; /* White text for theme names */
+}
+
+/* Shop Buttons in Night Theme */
+body.night-theme .shop-item button {
+  background: linear-gradient(to right, #3a3a3a, #5a5a5a); /* Grey gradient */
+  color: #dcdcdc;
+}
+
+body.night-theme .shop-item button:hover {
+  background: linear-gradient(to right, #5a5a5a, #3a3a3a); /* Grey hover effect */
+  color: #ffffff;
+}
+
+/* Input Field */
+input#studyTime {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #3e2723;
+}
+
+body.night-theme input#studyTime {
+  background: #2a2a2a; /* Dark grey for input in night theme */
+  border: 1px solid #5a5a5a; /* Grey border */
+  color: #dcdcdc; /* Light grey text */
+}
+
+body.night-theme input#studyTime::placeholder {
+  color: #7a7a7a; /* Placeholder grey */
+}
+
+/* Countdown Timer Styling */
+#message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #3e2723; /* Default color */
+}
+
+body.night-theme #message {
+  color: #ffffff; /* White text for night theme */
+}
+
+/* Forest Theme Specific Styles */
+body.forest-theme {
+  background: #014421; /* Dark green for app background */
+  color: #ffffff; /* White text for better visibility */
+}
+
+body.forest-theme #app {
+  background: #228B22; /* Green for the body and sprite background */
+  color: #ffffff; /* White text for content */
+}
+
+body.forest-theme #coffeeCupContainer {
+  background: #228B22; /* Matches app background in forest theme */
+}
+
+/* Headers and Section Titles in Forest Theme */
+body.forest-theme .title,
+body.forest-theme h2,
+body.forest-theme h3 {
+  color: #ffffff; /* White text for headers */
+}
+
+/* Buttons in Forest Theme */
+body.forest-theme button {
+  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient for brown buttons */
+  color: #ffffff; /* White text for brown buttons */
+}
+
+body.forest-theme button.light-brown {
+  background: linear-gradient(to right, #a0522d, #cd853f); /* Light brown gradient for light-brown buttons */
+  color: #ffffff;
+}
+
+body.forest-theme button.light-brown:hover {
+  background: linear-gradient(to right, #cd853f, #a0522d); /* Light brown hover */
+  color: #ffffff;
+}
+
+/* Quick Time Buttons */
+body.forest-theme .quick-time {
+  background: linear-gradient(to right, #a0522d, #cd853f); /* Light brown gradient */
+  color: #ffffff;
+}
+
+body.forest-theme .quick-time:hover {
+  background: linear-gradient(to right, #cd853f, #a0522d); /* Hover effect */
+  color: #ffffff;
+}
+
+/* Shop Items in Forest Theme */
+body.forest-theme .shop-item {
+  background: #2e8b57; /* Forest green */
+  color: #ffffff; /* White text for theme names */
+}
+
+/* Shop Buttons in Forest Theme */
+body.forest-theme .shop-item button {
+  background: linear-gradient(to right, #4e342e, #6d4c41); /* Brown gradient */
+  color: #ffffff; /* White text */
+}
+
+body.forest-theme .shop-item button.light-brown {
+  background: linear-gradient(to right, #a0522d, #cd853f); /* Light brown gradient */
+  color: #ffffff;
+}
+
+body.forest-theme .shop-item button.light-brown:hover {
+  background: linear-gradient(to right, #cd853f, #a0522d);
+  color: #ffffff;
+}
+
+/* Input Field */
+body.forest-theme input#studyTime {
+  background: #2e8b57; /* Forest green for input */
+  color: #ffffff; /* White text */
+  border: 1px solid #6b8e23; /* Green border */
+  border-radius: 8px;
+  padding: 10px;
+}
+
+body.forest-theme input#studyTime::placeholder {
+  color: #dcdcdc; /* Light grey placeholder text */
+}
+
+/* Sunset Theme Styles */
+body.sunset-theme {
+  background: linear-gradient(to top, #FF7E5F, #FFB199); /* Sunset gradient */
+  color: #3e2723; /* Brown text for contrast */
+}
+
+body.sunset-theme #app {
+  background: linear-gradient(to top, #FF7E5F, #FFB199); /* Sunset gradient for app container */
+}
+
+body.sunset-theme #coffeeCupContainer {
+  background: linear-gradient(to top, #FF7E5F, #FFB199); /* Matches app background */
+}
+
+/* Buttons in Sunset Theme */
+body.sunset-theme button {
+  background: linear-gradient(to right, #C44747, #FF6F6F); /* Red gradient for brown buttons */
+  color: #ffffff;
+}
+
+body.sunset-theme button.orange {
+  background: linear-gradient(to right, #FFA447, #FFC56F); /* Orange gradient for creme buttons */
+  color: #ffffff;
+}
+
+body.sunset-theme button.orange:hover {
+  background: linear-gradient(to right, #FFC56F, #FFA447); /* Lighter orange hover */
+}
+
+/* Input Field */
+body.sunset-theme input#studyTime {
+  background: #FFB199; /* Light sunset gradient */
+  border: 1px solid #FF7E5F;
+  color: #3e2723; /* Brown text */
+}
+
+body.sunset-theme input#studyTime::placeholder {
+  color: #D2691E; /* Darker orange placeholder */
+}

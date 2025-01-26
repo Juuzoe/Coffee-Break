@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Break</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <button id="faqButton" title="FAQ" aria-label="Open FAQ">?</button>
+    <button id="newWindowButton" title="Open in New Window" aria-label="Open in New Window">↗</button>
+    <h1 class="title">Coffee Break</h1>
+    <div id="currency" aria-live="polite">Currency: 0</div>
+    <div id="points" aria-live="polite">Points: 1200</div>
+    <div id="coffeeCupContainer">
+      <div id="coffeeCup">
+        <div id="coffeeFill" aria-hidden="true"></div>
+        <img src="assets/empty_cup.png" alt="Empty Coffee Cup" />
+      </div>
+    </div>
+    <div>
+      <input id="studyTime" type="number" placeholder="Enter study time (minutes)">
+      <div class="quick-times">
+        <button class="quick-time" data-time="20" aria-label="Set 20-minute timer">20</button>
+        <button class="quick-time" data-time="40" aria-label="Set 40-minute timer">40</button>
+        <button class="quick-time" data-time="60" aria-label="Set 60-minute timer">60</button>
+      </div>
+    </div>
+    <button id="startTimer" aria-label="Start Timer">Start</button>
+    <div id="message" aria-live="polite"></div>
+    <div id="shop" class="hidden">
+      <h2>Shop</h2>
+      <div class="shop-section">
+        <h3>Themes</h3>
+        <div class="shop-item">
+          <span>Night Theme</span>
+          <button id="nightThemeButton" data-cost="20" aria-label="Buy or Select Night Theme">Buy for 20</button>
+        </div>
+        <div class="shop-item">
+          <span>Sunset Theme</span>
+          <button id="sunsetThemeButton" data-cost="25" aria-label="Buy or Select Sunset Theme">Buy for 25</button>
+        </div>
+        <div class="shop-item">
+          <span>Forest Theme</span>
+          <button id="forestThemeButton" data-cost="30" aria-label="Buy or Select Forest Theme">Buy for 30</button>
+        </div>
+      </div>
+    </div>
+    <button id="shopToggle" aria-label="Toggle Shop">Open Shop</button>
+  </div>
+  <div id="faqModal" class="hidden" role="dialog" aria-labelledby="faqTitle" aria-describedby="faqContent">
+    <div class="modal-content">
+      <h2 id="faqTitle">FAQ</h2>
+      <p id="faqContent">Welcome to Coffee Break! This app helps you focus by setting study timers and rewarding you with points for customising your experience. You can also press on the arrow at the top right corner and put the app into a separate window. This way, you can study outside Google. So, when the time is up, take a break!</p>
+      <button id="closeFaq" aria-label="Close FAQ">Close</button>
+    </div>
+  </div>
+  <audio id="ringSound" src="assets/ring.mp3"></audio>
+  <script src="popup.js"></script>
+</body>
+</html>

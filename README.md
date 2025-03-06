@@ -4,6 +4,12 @@ Coffee Break is a lightweight Chrome extension designed to remind you to take re
 
 [View on Chrome Web Store](https://chromewebstore.google.com/detail/coffee-break/opdpnmglnkildipaipinblmmcllgajdp)
 
+## Demo
+
+Here's a demo screenshot of the Coffee Break extension in action:
+
+![Coffee Break Demo](Coffee-Break/assets/Demo/)
+
 ## Table of Contents
 
 - [Features](#features)

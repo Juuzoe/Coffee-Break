@@ -34,8 +34,8 @@ Install Coffee Break directly from the [Chrome Web Store](https://chromewebstore
 To run the extension locally or contribute to its development, follow these steps:
 
 a. **Clone the Repository:**
-   ```bash
    git clone https://github.com/Juuzoe/Coffee-Break.git
+   
 b. **Open Chrome Extensions Page:**
 
    Open Google Chrome and navigate to `chrome://extensions/`.
